@@ -56,6 +56,11 @@ while True:
     if direction == "n" :
         print("Moving north")
         print(current_column,current_row)
+        if current_column == 39:
+            current_column = random.randrange(0,40)
+            current_row = random.randrange(0,40)
+            print("You respawned! ")
+            continue
         current_column += 1
         print(current_column,current_row)
     elif direction == "e":
